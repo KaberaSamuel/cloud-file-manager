@@ -8,6 +8,7 @@
   --xsfs: 0.6rem;
   --sfs: 0.8rem;
   --fs: 1rem;
+  --mfs: 1.2rem;
   --lfs: 1.7rem;
   --darkgray: rgb(50, 50, 60);
   --white: rgb(245, 245, 245);
@@ -105,5 +106,9 @@ input::file-selector-button {
 @media (max-width: 600px) {
   :root {
     --lfs: 1.5rem;
+  }
+
+  .modal {
+    width: 90vw;
   }
 }

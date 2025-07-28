@@ -59,7 +59,7 @@
 }
 
 .folder-content .no-items {
-  height: 95%;
+  height: calc(100vh - 60px - (var(--nav-height)));
   display: flex;
   align-items: center;
   justify-content: center;
@@ -301,9 +301,12 @@ button.loading {
     width: fit-content;
   }
 
-  .app nav svg,
+  .app nav svg {
+    font-size: var(--fs);
+  }
+
   .sidebar svg {
-    font-size: var(--lfs);
+    font-size: 1.2rem;
   }
 
   .folder-content {
@@ -339,5 +342,14 @@ button.loading {
 
   .folder-content ul {
     gap: 8px;
+  }
+
+  /* Modal styles */
+  .modal > :first-child {
+    gap: 10px;
+  }
+
+  .file-info {
+    width: 100vw;
   }
 }
