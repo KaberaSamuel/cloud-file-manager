@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 import { apiUrl, extractData, getFolderById } from "../../service";
+import { useIsMobile } from "./useIsMobile";
 import { useAuth } from "./AuthProvider";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
@@ -221,6 +222,7 @@ function ShareLink({ activeFile, activeLink, setActiveLink, setActiveModal }) {
   const [pending, setPending] = useState(false);
   const [link, setLink] = useState(null);
   const [copied, setCopied] = useState(false);
+  const isMobile = useIsMobile();
 
   let linkButton;
   if (link) {
@@ -305,9 +307,15 @@ function ShareLink({ activeFile, activeLink, setActiveLink, setActiveModal }) {
   }, [activeLink]);
 
   return (
-    <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        gap: isMobile ? "10px" : "20px",
+      }}
+    >
       <div className="first">
-        <p>New File</p>
+        <h1>Share File</h1>
         <FontAwesomeIcon
           icon={faXmark}
           onClick={() => {
@@ -327,35 +335,35 @@ function ShareLink({ activeFile, activeLink, setActiveLink, setActiveModal }) {
               setActiveLink(0);
             }}
           >
-            1 hour
+            {isMobile ? "1h" : "1 hour"}
           </p>
           <p
             onClick={() => {
               setActiveLink(1);
             }}
           >
-            4 hour
+            {isMobile ? "4h" : "4 hour"}
           </p>
           <p
             onClick={() => {
               setActiveLink(2);
             }}
           >
-            1 day
+            {isMobile ? "1d" : "1 days"}
           </p>
           <p
             onClick={() => {
               setActiveLink(3);
             }}
           >
-            3 days
+            {isMobile ? "3d" : "3 days"}
           </p>
           <p
             onClick={() => {
               setActiveLink(4);
             }}
           >
-            1 week
+            {isMobile ? "1w" : "1 weeks"}
           </p>
         </div>
 

@@ -82,6 +82,10 @@
 }
 
 /* Modal styles */
+.modal h1 {
+  font-size: 1.2rem;
+}
+
 .modal > :first-child {
   display: flex;
   flex-direction: column;
@@ -152,10 +156,6 @@
   gap: 10px;
 }
 
-.modal .links-duration h1 {
-  font-size: 1.2rem;
-}
-
 .modal .links-duration .durations {
   display: flex;
   border-radius: 10px;
@@ -167,6 +167,7 @@
   flex: 1 1 auto;
   font-size: 1rem;
   padding: 10px 15px;
+  text-align: center;
   border-right: 1px solid gray;
 }
 
@@ -351,5 +352,10 @@ button.loading {
 
   .file-info {
     width: 100vw;
+  }
+
+  .modal h1 {
+    font-size: 1rem;
+    font-weight: 700;
   }
 }

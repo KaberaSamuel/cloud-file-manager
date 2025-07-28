@@ -109,6 +109,8 @@ input::file-selector-button {
   }
 
   .modal {
+    font-size: 0.95rem;
     width: 90vw;
+    padding: 20px 23px;
   }
 }

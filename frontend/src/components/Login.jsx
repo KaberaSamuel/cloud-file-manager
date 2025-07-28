@@ -38,6 +38,7 @@ function Login() {
     if (!response.ok) {
       const { message } = await response.json();
       setErrorMessage(message);
+      setPending(false);
     } else {
       const dataTree = await extractData(response);
       setDataTree(dataTree);
