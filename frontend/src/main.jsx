@@ -22,6 +22,7 @@ const router = createBrowserRouter([
   {
     path: "/folders",
     element: <App />,
+    errorElement: <NotFoundPage />,
     children: [
       {
         index: true,
@@ -41,7 +42,7 @@ const router = createBrowserRouter([
     path: "/signup",
     element: <SignUp />,
   },
-  { path: "*", element: <NotFoundPage /> },
+  { path: "/*", element: <NotFoundPage /> },
 ]);
 
 createRoot(document.getElementById("root")).render(

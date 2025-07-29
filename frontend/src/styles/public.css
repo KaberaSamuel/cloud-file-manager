@@ -61,10 +61,10 @@ button .pending {
 form .error-message {
   font-size: var(--sfs);
   text-transform: capitalize;
+  color: red;
 }
 
 /* CSS Media queries for mobile devices */
-
 @media (max-width: 600px) {
   main {
     display: block;
