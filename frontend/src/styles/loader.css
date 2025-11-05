@@ -1,6 +1,8 @@
 .app-loader {
   height: 100vh;
   display: flex;
+  flex-direction: column;
+  gap: 30px;
   justify-content: center;
   align-items: center;
 }
@@ -31,4 +33,9 @@
   to {
     transform: rotate(1turn);
   }
+}
+
+.app-loader .waiting-time {
+  margin-top: 5px;
+  color: #ef4766;
 }
