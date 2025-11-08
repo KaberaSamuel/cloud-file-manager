@@ -1,19 +1,46 @@
-# **Cloud File Manager**
+# 📂 Cloud File Manager (File Uploader)
 
-A web app that lets you upload files, organize them in folders, and share them.
+## About The Project
 
-**Live demo**: [file-uploader-1cpl.onrender.com](https://file-uploader-1cpl.onrender.com)
+This project is a full-featured cloud file management system. I tried my best to implement the core functionalities from google drive services.
 
-## **How to Use**
+It provides users with the ability to:
 
-1. Sign up and log in.
-2. Use the sidebar:
-   - Click **New File** to upload a file.
-   - Click **New Folder** to create a folder in the current location.
-3. Click a file to open options: download, share, or delete.
-4. Use the folder path or sidebar tree to track your location.
-5. Enjoy the app and share it with others!
+- Create, view, and organize files and folders.
+- Securely upload, download, and delete files.
+- Manage a hierarchical file structure for easy navigation.
 
-## **Note**
+---
 
-Since this app is hosted on [Render](https://render.com/) with a freeplan, only images and documents are allowed to conserve the server resources.
+## 🛠️ Technologies Used
+
+The application is built using React for frontend and Node (with express) for backend.
+
+### 🖥️ Frontend
+
+| Category             | Technology          | Role in this app                                                                                 |
+| :------------------- | :------------------ | :----------------------------------------------------------------------------------------------- |
+| **Language**         | **JavaScript (JS)** | Primary language for the client-side logic.                                                      |
+| **Main UI**          | **React**           | Library for building the dynamic, component-based user interface.                                |
+| **Styling**          | **CSS**             | Used for styling and the look                                                                    |
+| **Folder Structure** | **MUI TreeView**    | Used to efficiently display the hierarchical folder structure (it saved me alot of headache 😅). |
+| **Animations**       | **Framer Motion**   | Used to easily created animated components                                                       |
+
+### 🧠 Backend
+
+| Category               | Technology                | Role in this app                                                                          |
+| :--------------------- | :------------------------ | :---------------------------------------------------------------------------------------- |
+| **Runtime**            | **Node.js**               | JavaScript runtime environment for running the server.                                    |
+| **API Framework**      | **Express.js**            | Fast, minimalist framework used for building API endpoints.                               |
+| **Database & Storage** | **Supabase**              | Provides a PostgreSQL database and **Supabase Buckets** for efficient cloud file storage. |
+| **File Handling**      | **Multer.js**             | Middleware for handling file uploads.                                                     |
+| **Authentication**     | **JWT (JSON Web Tokens)** | Used for storing users' sessions                                                          |
+| **Password Security**  | **Bcrypt**                | Used for securely hashing and verifying user passwords                                    |
+
+---
+
+## 🚀 Quick Links
+
+This project is live at: https://file-uploader-1cpl.onrender.com/
+
+If you have an idea on where to improve feel free to reach out to me at kaberanshutisamuel@gmail.com
