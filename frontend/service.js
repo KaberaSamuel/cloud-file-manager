@@ -1,7 +1,4 @@
-const apiUrl =
-  process.env.NODE_ENV === "production"
-    ? "https://file-uploader-xctw.onrender.com"
-    : "http://localhost:3000";
+const apiUrl = import.meta.env.VITE_BACKEND_URL;
 
 function getDateString(milliSecs) {
   const date = new Date(milliSecs);
