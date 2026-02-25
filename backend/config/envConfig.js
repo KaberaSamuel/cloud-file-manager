@@ -6,5 +6,13 @@ const jwtSecret = process.env.JWT_SECRET;
 const sessionSecret = process.env.SESSION_SECRET;
 const supabaseKey = process.env.SUPABASE_KEY;
 const supabaseUrl = process.env.SUPABASE_URL;
+const frontendUrl = process.env.FRONTEND_URL || "http://localhost:5173";
 
-export { nodeEnv, jwtSecret, sessionSecret, supabaseUrl, supabaseKey };
+export {
+  nodeEnv,
+  jwtSecret,
+  sessionSecret,
+  supabaseUrl,
+  supabaseKey,
+  frontendUrl,
+};
